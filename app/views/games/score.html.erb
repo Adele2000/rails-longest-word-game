@@ -1,0 +1,13 @@
+<h1>Result</h1>
+
+<div>
+  <% if !@included %>
+    <p> Sorry, but <%= @answer %> can’t be built out of <%= @letters.join(", ") %>.</p>
+  <% elsif !@english %>
+    <p> Sorry, but <%= @answer %> does not seem to be an English word.</p>
+  <% else %>
+    <p> Congratulation! <%= @answer %> is a valid English word.</p>
+  <% end %>
+</div>
+
+<%= link_to "Play again", new_path %>
